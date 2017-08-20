@@ -8,12 +8,22 @@ public class Cell {
 
     private boolean flagged = false;
 
+    private boolean discovered = false;
+
     public void toogleFlag(){
         flagged = !flagged;
     }
 
     public boolean flagged(){
         return flagged;
+    }
+
+    public void discover(){
+        discovered = true;
+    }
+
+    public boolean isDiscovered(){
+        return discovered;
     }
 
     @Override

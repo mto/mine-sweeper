@@ -21,6 +21,8 @@ public class MineMap {
 
     private float mineProb;
 
+    private int mineNb;
+
     public MineMap(int nRow, int nCol, float mineProb) {
         this.nRow = nRow;
         this.nCol = nCol;
@@ -36,11 +38,16 @@ public class MineMap {
         return cells[i][j];
     }
 
+    public int getNbOfMines(){
+        return mineNb;
+    }
+
     private void setMines() {
         for (int i = 0; i < nRow; i++) {
             for (int j = 0; j < nCol; j++) {
                 if (new Random().nextFloat() < mineProb) {
                     cells[i][j] = new MineCell();
+                    mineNb++;
                 }
             }
         }

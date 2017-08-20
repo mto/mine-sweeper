@@ -20,6 +20,7 @@ public class MineSweeper extends Application {
 
         BorderPane bdp = new BorderPane();
         bdp.setCenter(gb.grid);
+        bdp.setTop(gb.gLabel);
 
         Scene scene = new Scene(bdp);
 
